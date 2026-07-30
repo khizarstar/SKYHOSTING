@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5" />
+  <title>SKY HOSTING — Privacy Policy</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* ----- reset & base ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #081226;
+      color: #eaf2ff;
+      overflow-x: hidden;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ----- floating blobs ----- */
+    .blob {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.2;
+      pointer-events: none;
+      z-index: 0;
+      animation: floatBlob 20s infinite alternate ease-in-out;
+    }
+    .blob1 {
+      width: 500px;
+      height: 500px;
+      background: #1b6eff;
+      top: -120px;
+      left: -120px;
+    }
+    .blob2 {
+      width: 600px;
+      height: 600px;
+      background: #00c8ff;
+      bottom: -150px;
+      right: -100px;
+      animation-delay: 4s;
+    }
+    .blob3 {
+      width: 400px;
+      height: 400px;
+      background: #2b3b8f;
+      top: 40%;
+      left: 30%;
+      animation-delay: 7s;
+      opacity: 0.12;
+    }
+
+    @keyframes floatBlob {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(50px, -70px) scale(1.2); }
+    }
+
+    /* ----- glassmorphism base ----- */
+    .glass {
+      background: rgba(10, 20, 44, 0.45);
+      backdrop-filter: blur(14px) saturate(180%);
+      -webkit-backdrop-filter: blur(14px) saturate(180%);
+      border: 1px solid rgba(56, 189, 248, 0.12);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ----- fixed navigation ----- */
+    .docs-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(8, 18, 38, 0.82);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+      padding: 0 1.5rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.3s;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      flex-shrink: 0;
+    }
+    .nav-left img {
+      height: 32px;
+      width: auto;
+      filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.25));
+    }
+    .nav-left .brand {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #a0d0ff, #38BDF8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      white-space: nowrap;
+    }
+
+    .nav-center {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      max-width: 520px;
+      margin: 0 1.5rem;
+    }
+    .nav-center .search-wrap {
+      width: 100%;
+      position: relative;
+    }
+    .nav-center .search-wrap input {
+      width: 100%;
+      padding: 0.5rem 1.2rem 0.5rem 2.6rem;
+      border-radius: 60px;
+      background: rgba(10, 24, 50, 0.6);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      color: #f0f9ff;
+      font-size: 0.9rem;
+      outline: none;
+      transition: 0.3s;
+    }
+    .nav-center .search-wrap input::placeholder {
+      color: #7da6d0;
+    }
+    .nav-center .search-wrap input:focus {
+      border-color: #38BDF8;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+      background: rgba(10, 24, 50, 0.8);
+    }
+    .search-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #6a9fd0;
+      font-size: 0.9rem;
+      pointer-events: none;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    /* ----- HAMBURGER — ALWAYS VISIBLE ----- */
+    .hamburger {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.15);
+      color: #d6eaff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 0.4rem 0.8rem;
+      border-radius: 10px;
+      transition: 0.25s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      line-height: 1;
+    }
+    .hamburger:hover {
+      background: rgba(56, 189, 248, 0.18);
+      border-color: #38BDF8;
+      color: white;
+      transform: scale(1.03);
+    }
+    .hamburger .hamburger-label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #8ac4ff;
+      letter-spacing: 0.3px;
+    }
+    @media (max-width: 500px) {
+      .hamburger .hamburger-label {
+        display: none;
+      }
+      .hamburger {
+        padding: 0.4rem 0.7rem;
+        font-size: 1.3rem;
+      }
+    }
+
+    /* ----- sidebar overlay ----- */
+    .sidebar-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+    .sidebar-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    /* ----- sidebar ----- */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -340px;
+      width: 300px;
+      height: 100vh;
+      background: rgba(6, 14, 34, 0.94);
+      backdrop-filter: blur(30px) saturate(200%);
+      -webkit-backdrop-filter: blur(30px) saturate(200%);
+      border-right: 1px solid rgba(56, 189, 248, 0.1);
+      z-index: 3000;
+      transition: left 0.38s cubic-bezier(0.22, 0.9, 0.36, 1);
+      padding: 1.8rem 1rem 2rem;
+      overflow-y: auto;
+      box-shadow: 8px 0 60px rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+    }
+    .sidebar.open {
+      left: 0;
+    }
+    .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid rgba(56, 189, 248, 0.08);
+      margin-bottom: 1.2rem;
+    }
+    .sidebar-header .brand-side {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      font-size: 1.2rem;
+      background: linear-gradient(135deg, #b0d6ff, #38BDF8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .sidebar-header .brand-side img {
+      height: 28px;
+      filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.3));
+    }
+    .close-sidebar {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.12);
+      color: #b0ccf0;
+      font-size: 1.4rem;
+      cursor: pointer;
+      padding: 0.2rem 0.6rem;
+      border-radius: 8px;
+      transition: 0.2s;
+      line-height: 1.4;
+    }
+    .close-sidebar:hover {
+      background: rgba(56, 189, 248, 0.18);
+      border-color: #38BDF8;
+      color: white;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+      flex: 1;
+    }
+    .sidebar ul li a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.6rem 1rem;
+      border-radius: 14px;
+      color: #c4ddff;
+      text-decoration: none;
+      font-weight: 450;
+      transition: 0.2s;
+      border: 1px solid transparent;
+      font-size: 0.95rem;
+    }
+    .sidebar ul li a i {
+      width: 1.6rem;
+      color: #5faaff;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    .sidebar ul li a:hover {
+      background: rgba(56, 189, 248, 0.08);
+      border-color: rgba(56, 189, 248, 0.15);
+      transform: translateX(4px);
+      color: white;
+    }
+    .sidebar ul li a.active {
+      background: rgba(56, 189, 248, 0.12);
+      border-color: rgba(56, 189, 248, 0.2);
+      color: white;
+      font-weight: 500;
+    }
+    .sidebar ul li a .link-badge {
+      margin-left: auto;
+      background: rgba(56, 189, 248, 0.12);
+      font-size: 0.6rem;
+      padding: 0.1rem 0.6rem;
+      border-radius: 20px;
+      color: #6a9fd0;
+    }
+    .sidebar-footer {
+      border-top: 1px solid rgba(56, 189, 248, 0.06);
+      padding-top: 1rem;
+      margin-top: 0.5rem;
+      font-size: 0.75rem;
+      color: #6a8aaa;
+    }
+
+    /* ----- main content ----- */
+    .main {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5.5rem 2rem 2rem;
+    }
+
+    /* ----- page header ----- */
+    .page-header {
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.8s ease;
+    }
+    .page-header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      background: linear-gradient(135deg, #e0f0ff, #38BDF8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.4rem;
+    }
+    .badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .badge {
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      padding: 0.25rem 1rem;
+      border-radius: 60px;
+      font-size: 0.85rem;
+      color: #8ac4ff;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      backdrop-filter: blur(4px);
+    }
+    .badge i {
+      font-size: 0.7rem;
+      color: #38BDF8;
+    }
+
+    /* ----- table of contents ----- */
+    .toc-wrap {
+      background: rgba(10, 20, 44, 0.4);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(56, 189, 248, 0.07);
+      border-radius: 24px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.9s ease;
+    }
+    .toc-wrap h3 {
+      color: #b0d4ff;
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      font-size: 1.1rem;
+    }
+    .toc-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.2rem;
+    }
+    .toc-grid a {
+      color: #aac8f0;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: 0.2s;
+      border-bottom: 1px solid transparent;
+      padding: 0.1rem 0;
+    }
+    .toc-grid a:hover {
+      color: #38BDF8;
+      border-bottom-color: #38BDF8;
+    }
+    .toc-grid a.hidden-toc {
+      display: none;
+    }
+
+    /* ----- privacy content ----- */
+    .privacy-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+    .privacy-section {
+      background: rgba(10, 20, 44, 0.3);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(56, 189, 248, 0.05);
+      border-radius: 28px;
+      padding: 1.8rem 2rem;
+      transition: 0.3s;
+      animation: fadeUp 0.7s ease both;
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+    .privacy-section.visible {
+      opacity: 1;
+    }
+    .privacy-section:hover {
+      border-color: rgba(56, 189, 248, 0.15);
+      background: rgba(12, 24, 50, 0.45);
+      box-shadow: 0 8px 30px rgba(0, 40, 80, 0.12);
+    }
+    .privacy-section h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #c6e0ff;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .privacy-section h2 i {
+      color: #38BDF8;
+      font-size: 1.3rem;
+      opacity: 0.7;
+    }
+    .privacy-section p {
+      color: #c8ddf5;
+      margin-bottom: 0.6rem;
+    }
+    .privacy-section ul {
+      list-style: none;
+      padding-left: 0.5rem;
+    }
+    .privacy-section ul li {
+      padding: 0.15rem 0 0.15rem 1.8rem;
+      position: relative;
+      color: #c0d8f0;
+    }
+    .privacy-section ul li::before {
+      content: "•";
+      color: #38BDF8;
+      position: absolute;
+      left: 0.2rem;
+      font-weight: 700;
+    }
+    .privacy-section .sub-label {
+      font-weight: 500;
+      margin-top: 0.8rem;
+      color: #b0d4ff;
+    }
+    .privacy-section.hidden-section {
+      display: none;
+    }
+
+    /* ----- back to top ----- */
+    .back-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 500;
+      background: rgba(56, 189, 248, 0.15);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 60px;
+      padding: 0.8rem 1.2rem;
+      color: #b0d4ff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      opacity: 0;
+      pointer-events: none;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+    .back-top.visible {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .back-top:hover {
+      background: rgba(56, 189, 248, 0.25);
+      border-color: #38BDF8;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    /* ----- footer ----- */
+    .footer {
+      margin-top: 4rem;
+      padding: 2.5rem 0 1.5rem;
+      border-top: 1px solid rgba(56, 189, 248, 0.06);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      backdrop-filter: blur(4px);
+    }
+    .footer .brand-foot {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .footer .brand-foot img {
+      height: 32px;
+      filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.2));
+    }
+    .footer .brand-foot span {
+      font-weight: 600;
+      font-size: 1.2rem;
+      letter-spacing: -0.3px;
+      background: linear-gradient(135deg, #b0d6ff, #38BDF8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .footer .discord-btn {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.15);
+      padding: 0.5rem 1.4rem;
+      border-radius: 60px;
+      color: #b0d4ff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      backdrop-filter: blur(4px);
+    }
+    .footer .discord-btn:hover {
+      background: rgba(56, 189, 248, 0.18);
+      border-color: #38BDF8;
+      color: white;
+    }
+    .footer .copy {
+      font-size: 0.85rem;
+      color: #6a8aaa;
+      width: 100%;
+      text-align: center;
+      margin-top: 1.2rem;
+    }
+    .footer .version {
+      color: #4a6a8a;
+      font-size: 0.75rem;
+    }
+
+    /* ----- animations ----- */
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(28px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ----- responsive tweaks ----- */
+    @media (max-width: 820px) {
+      .docs-nav {
+        padding: 0 1rem;
+      }
+      .nav-center {
+        display: none;
+      }
+      .page-header h1 {
+        font-size: 2.2rem;
+      }
+      .privacy-section {
+        padding: 1.4rem 1.2rem;
+      }
+      .privacy-section h2 {
+        font-size: 1.3rem;
+      }
+      .toc-wrap {
+        padding: 1.2rem 1.2rem;
+      }
+      .main {
+        padding: 5rem 1rem 1.5rem;
+      }
+      .footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    @media (max-width: 500px) {
+      .page-header h1 {
+        font-size: 1.8rem;
+      }
+      .privacy-section {
+        padding: 1rem;
+      }
+      .badge-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .sidebar {
+        width: 280px;
+        left: -300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- floating blobs -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="docs-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-left">
+      <img src="logo.png" alt="SKY HOSTING logo" />
+      <span class="brand">SKY HOSTING</span>
+    </div>
+    <div class="nav-center">
+      <div class="search-wrap">
+        <span class="search-icon" aria-hidden="true"><i class="fas fa-search"></i></span>
+        <input type="text" id="searchInput" placeholder="Search privacy policy..." aria-label="Search privacy policy sections" />
+      </div>
+    </div>
+    <div class="nav-right">
+      <!-- HAMBURGER — ALWAYS VISIBLE -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+        <span class="hamburger-label">Menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== SIDEBAR OVERLAY ===== -->
+  <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar" id="sidebar" role="navigation" aria-label="Sidebar navigation">
+    <div class="sidebar-header">
+      <div class="brand-side">
+        <img src="logo.png" alt="SKY HOSTING" />
+        <span>SKY HOSTING</span>
+      </div>
+      <button class="close-sidebar" id="closeSidebarBtn" aria-label="Close menu">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="terms.html"><i class="fas fa-file-contract"></i> Terms of Service</a></li>
+      <li><a href="privacy.html" class="active"><i class="fas fa-lock"></i> Privacy Policy</a></li>
+      <li><a href="refund.html"><i class="fas fa-rotate-left"></i> Refund Policy</a></li>
+      <li><a href="billing.html"><i class="fas fa-credit-card"></i> Billing &amp; Renewal</a></li>
+      <li><a href="support.html"><i class="fas fa-headset"></i> Support Policy</a></li>
+      <li><a href="suspension.html"><i class="fas fa-ban"></i> Suspension &amp; Termination</a></li>
+      <li><a href="community.html"><i class="fas fa-users"></i> Community Guidelines</a></li>
+      <li><a href="invite-rewards.html"><i class="fas fa-gift"></i> Invite Rewards</a></li>
+      <li><a href="https://discord.gg/BXNq6EtZRb" target="_blank"><i class="fab fa-discord"></i> Discord Server <span class="link-badge">Join</span></a></li>
+    </ul>
+    <div class="sidebar-footer">&copy; 2026 SKY HOSTING</div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main" role="main">
+    <div class="page-header">
+      <h1>SKY HOSTING — Privacy Policy</h1>
+      <div class="badge-wrap">
+        <span class="badge"><i class="fas fa-calendar-alt"></i> Last Updated: July 30, 2026</span>
+        <span class="badge"><i class="fas fa-shield-alt"></i> v2.0</span>
+      </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="toc-wrap" id="toc">
+      <h3><i class="fas fa-list-ul" style="color:#38BDF8; margin-right:0.5rem;"></i> Table of Contents</h3>
+      <div class="toc-grid" id="tocGrid"></div>
+    </div>
+
+    <!-- Privacy Content -->
+    <div class="privacy-content" id="privacyContent"></div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="brand-foot">
+        <img src="logo.png" alt="SKY HOSTING" />
+        <span>SKY HOSTING</span>
+        <span style="font-weight:400; color:#7f9fc0; font-size:0.85rem; -webkit-text-fill-color:#8aa9d0;">Premium VPS, Minecraft &amp; Cloud Hosting</span>
+      </div>
+      <div>
+        <a href="https://discord.gg/BXNq6EtZRb" target="_blank" class="discord-btn" rel="noopener noreferrer">
+          <i class="fab fa-discord"></i> Join Discord
+        </a>
+      </div>
+      <div class="copy">
+        &copy; 2026 SKY HOSTING &bull; All Rights Reserved.
+        <span class="version">v2.0</span>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Back to Top -->
+  <button class="back-top" id="backTopBtn" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i> Top
+  </button>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // ----- Privacy Policy Sections (exact text) -----
+      const sections = [{
+        id: 's1',
+        title: '1. Introduction',
+        text: 'At SKY HOSTING, we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, store, disclose, and safeguard your information when you use our website, client area, Discord server, control panel, and any services provided by SKY HOSTING. By using our services, you agree to the practices described in this Privacy Policy.'
+      }, {
+        id: 's2',
+        title: '2. Information We Collect',
+        text: 'Depending on the services you use, we may collect the following information:',
+        list: [
+          { label: 'Account Information', sub: ['Discord User ID', 'Discord Username', 'Email Address', 'Account Display Name', 'Billing Information (when applicable)'] },
+          { label: 'Service Information', sub: ['VPS Information', 'Minecraft Server Information', 'Hosting Configuration', 'Resource Usage', 'Server Statistics', 'IP Addresses assigned to your services'] },
+          { label: 'Technical Information', sub: ['Browser Type', 'Device Information', 'Operating System', 'Connection Information', 'Log Files', 'Error Reports'] },
+          { label: 'Payment Information', sub: ['Payments are processed through trusted third-party payment providers. SKY HOSTING does not store your complete payment card information.'] }
+        ]
+      }, {
+        id: 's3',
+        title: '3. How We Use Your Information',
+        text: 'Your information may be used to:',
+        list: ['Provide hosting services', 'Create and manage your account', 'Deliver purchased services', 'Process renewals', 'Respond to support requests', 'Improve our services', 'Detect abuse and fraud', 'Monitor service performance', 'Enforce our Terms of Service', 'Send important service announcements', 'Protect our infrastructure and users'],
+        extra: 'We never sell your personal information.'
+      }, {
+        id: 's4',
+        title: '4. Cookies and Similar Technologies',
+        text: 'Our website may use cookies and similar technologies to:',
+        list: ['Keep you signed in', 'Improve website performance', 'Remember preferences', 'Enhance user experience', 'Improve security'],
+        extra: 'You may disable cookies through your browser settings, although some features may no longer function properly.'
+      }, {
+        id: 's5',
+        title: '5. Data Security',
+        text: 'We take reasonable administrative, technical, and organizational measures to protect your information. These include:',
+        list: ['Secure authentication', 'Encrypted communications where applicable', 'Firewall protection', 'Access controls', 'Infrastructure monitoring', 'Security logging'],
+        extra: 'While we strive to protect your information, no system connected to the Internet can be guaranteed to be completely secure.'
+      }, {
+        id: 's6',
+        title: '6. Data Retention',
+        text: 'We retain personal information only for as long as necessary to:',
+        list: ['Provide our services', 'Comply with legal obligations', 'Resolve disputes', 'Prevent fraud', 'Enforce our agreements'],
+        extra: 'After this period, information may be securely deleted or anonymized.'
+      }, {
+        id: 's7',
+        title: '7. Information Sharing',
+        text: 'We do not sell, rent, or trade your personal information. Information may be shared only when necessary with:',
+        list: ['Payment providers', 'Infrastructure providers', 'Security services', 'Legal authorities when required by law', 'Service providers assisting in operating SKY HOSTING'],
+        extra: 'All third parties receive only the information necessary to perform their services.'
+      }, {
+        id: 's8',
+        title: '8. User Responsibilities',
+        text: 'You are responsible for:',
+        list: ['Protecting your account credentials', 'Maintaining secure passwords', 'Keeping your contact information accurate', 'Protecting your own backups'],
+        extra: 'You should never share your login credentials with others.'
+      }, {
+        id: 's9',
+        title: '9. Children\'s Privacy',
+        text: 'Our services are not intentionally directed toward children where prohibited by applicable law. If we learn that personal information has been collected in violation of applicable legal requirements, we will take appropriate steps to remove it.'
+      }, {
+        id: 's10',
+        title: '10. Third-Party Services',
+        text: 'Our services may integrate with third-party platforms including:',
+        list: ['Discord', 'Payment Providers', 'Pterodactyl Panel', 'External APIs'],
+        extra: 'These services operate under their own privacy policies. SKY HOSTING is not responsible for the privacy practices of third-party websites or services.'
+      }, {
+        id: 's11',
+        title: '11. Service Logs',
+        text: 'To maintain service reliability and security, we may automatically record:',
+        list: ['Login activity', 'API usage', 'Resource consumption', 'Error logs', 'Security events', 'Administrative actions'],
+        extra: 'These logs help us investigate abuse, troubleshoot issues, and improve platform stability.'
+      }, {
+        id: 's12',
+        title: '12. Your Privacy Rights',
+        text: 'Depending on your jurisdiction, you may have the right to:',
+        list: ['Access your personal information', 'Request correction of inaccurate information', 'Request deletion of eligible personal information', 'Request a copy of your stored data', 'Withdraw consent where applicable'],
+        extra: 'Some requests may be limited where we are legally required to retain certain information.'
+      }, {
+        id: 's13',
+        title: '13. Changes to This Privacy Policy',
+        text: 'We may update this Privacy Policy from time to time. Any changes will become effective upon publication. Continued use of SKY HOSTING services after changes are posted constitutes acceptance of the updated Privacy Policy.'
+      }, {
+        id: 's14',
+        title: '14. Contact Us',
+        text: 'If you have any questions, concerns, or requests regarding this Privacy Policy, please contact SKY HOSTING through our official Discord support channels.'
+      }, {
+        id: 's15',
+        title: 'Your Privacy Matters',
+        text: 'SKY HOSTING is committed to protecting your information, maintaining transparency, and providing a secure hosting environment. By using our services, you acknowledge that you have read, understood, and agree to this Privacy Policy.'
+      }];
+
+      // ----- Render content -----
+      const container = document.getElementById('privacyContent');
+      const tocGrid = document.getElementById('tocGrid');
+
+      let html = '';
+      let tocHtml = '';
+
+      sections.forEach((s, idx) => {
+        const anchor = 'section-' + idx;
+        html += '<div class="privacy-section" id="' + anchor + '" style="animation-delay:' + (idx * 0.05) + 's;">';
+        html += '<h2><i class="fas fa-shield-alt"></i> ' + s.title + '</h2>';
+        if (s.text) html += '<p>' + s.text + '</p>';
+
+        if (s.list) {
+          if (s.list.length > 0 && typeof s.list[0] === 'object' && s.list[0].label) {
+            s.list.forEach(function(item) {
+              html += '<p class="sub-label">' + item.label + '</p>';
+              html += '<ul>';
+              item.sub.forEach(function(sub) {
+                html += '<li>' + sub + '</li>';
+              });
+              html += '</ul>';
+            });
+          } else {
+            html += '<ul>';
+            s.list.forEach(function(item) {
+              html += '<li>' + item + '</li>';
+            });
+            html += '</ul>';
+          }
+        }
+
+        if (s.extra) html += '<p style="margin-top:0.8rem;">' + s.extra + '</p>';
+        html += '</div>';
+
+        tocHtml += '<a href="#' + anchor + '">' + s.title + '</a>';
+      });
+
+      container.innerHTML = html;
+      tocGrid.innerHTML = tocHtml;
+
+      // ============================================================
+      // SIDEBAR CONTROLS — ALWAYS AVAILABLE
+      // ============================================================
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      const hamburger = document.getElementById('hamburgerBtn');
+      const closeBtn = document.getElementById('closeSidebarBtn');
+
+      function openSidebar() {
+        sidebar.classList.add('open');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        hamburger.setAttribute('aria-expanded', 'true');
+      }
+
+      function closeSidebarFn() {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+
+      hamburger.addEventListener('click', openSidebar);
+      closeBtn.addEventListener('click', closeSidebarFn);
+      overlay.addEventListener('click', closeSidebarFn);
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeSidebarFn();
+      });
+
+      // ----- Back to top -----
+      const backBtn = document.getElementById('backTopBtn');
+
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 500) {
+          backBtn.classList.add('visible');
+        } else {
+          backBtn.classList.remove('visible');
+        }
+      });
+
+      backBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // ----- Search: filter sections and TOC -----
+      const searchInput = document.getElementById('searchInput');
+
+      searchInput.addEventListener('input', function(e) {
+        const q = e.target.value.toLowerCase().trim();
+        const allSections = document.querySelectorAll('.privacy-section');
+        const tocLinks = document.querySelectorAll('.toc-grid a');
+
+        allSections.forEach(function(section, idx) {
+          const text = section.textContent.toLowerCase();
+          if (q === '' || text.includes(q)) {
+            section.classList.remove('hidden-section');
+          } else {
+            section.classList.add('hidden-section');
+          }
+        });
+
+        tocLinks.forEach(function(link, idx) {
+          const section = document.getElementById('section-' + idx);
+          if (section && !section.classList.contains('hidden-section')) {
+            link.classList.remove('hidden-toc');
+          } else {
+            link.classList.add('hidden-toc');
+          }
+        });
+      });
+
+      // ----- Intersection Observer for scroll animations -----
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.privacy-section').forEach(function(el) {
+          observer.observe(el);
+        });
+      }
+
+    })();
+  </script>
+</body>
+</html>
