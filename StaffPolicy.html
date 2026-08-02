@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Inter:opsz,wght@14..32,400..800&display=swap" rel="stylesheet">
-<link rel="icon" href="favicon.ico">
+<link rel="icon" href="/root/favicon.ico">
 <style>
   /* ============================================================
      TOKENS
@@ -321,6 +321,9 @@
   .outcome .oc-label{ font-size:13.5px; font-weight:700; color: var(--heading); display:flex; align-items:center; gap:8px; }
   .outcome .oc-label .mark{ margin-top:0; }
   .outcome p{ font-size:12.5px; margin-top:6px; color: var(--muted); }
+  .toc-link{ transition: border-color .2s var(--ease), transform .2s var(--ease); }
+  .toc-link:hover{ border-color: var(--accent); transform: translateY(-2px); }
+  .toc-link .oc-label{ color: var(--accent-2); }
 
   /* roles / enforcement cards */
   .enforce-grid{
@@ -400,13 +403,13 @@
 <header class="topbar">
   <div class="topbar-inner">
     <div class="brand">
-      <img class="brand-logo" src="logo.png" alt="SKY HOSTING logo">
+      <img class="brand-logo" src="/root/logo.png" alt="SKY HOSTING logo">
       <span>SKY HOSTING</span>
       <span class="brand-sep">/</span>
       <span class="brand-doc">staff-conduct.md</span>
     </div>
     <div class="topbar-meta">
-      <span class="meta-item">Rev 2026.08.01</span>
+      <span class="meta-item">Rev 2026.08.02</span>
       <span class="meta-item status-item"><span class="status-dot" aria-hidden="true"></span>Active</span>
     </div>
   </div>
@@ -425,13 +428,76 @@
 
       <div class="badge-row">
         <span class="badge">Effective&nbsp;<b>Aug 1, 2026</b></span>
-        <span class="badge">Last Updated&nbsp;<b>Aug 1, 2026</b></span>
+        <span class="badge">Last Updated&nbsp;<b>Aug 2, 2026</b></span>
         <span class="badge">Applies To&nbsp;<b>All Staff Tiers</b></span>
         <span class="badge">Governing Body&nbsp;<b>MK | PLAYZ</b></span>
-        <span class="badge">Reading Time&nbsp;<b>~6 min</b></span>
+        <span class="badge">Reading Time&nbsp;<b>~12 min</b></span>
         <span class="badge"><span class="status-dot" aria-hidden="true"></span>Status&nbsp;<b>Active</b></span>
       </div>
 
+      <div class="doc-card" style="margin-top:28px;">
+        <span class="card-eyebrow">Document Information</span>
+        <div class="outcome-grid">
+          <div class="outcome">
+            <div class="oc-label">Document Type</div>
+            <p>Internal Governance Policy</p>
+          </div>
+          <div class="outcome">
+            <div class="oc-label">Department</div>
+            <p>Staff Management</p>
+          </div>
+          <div class="outcome">
+            <div class="oc-label">Document Owner</div>
+            <p>MK | PLAYZ</p>
+          </div>
+          <div class="outcome">
+            <div class="oc-label">Approval Status</div>
+            <p>Approved</p>
+          </div>
+          <div class="outcome">
+            <div class="oc-label">Current Version</div>
+            <p>Version 2.0</p>
+          </div>
+          <div class="outcome">
+            <div class="oc-label">Current Revision</div>
+            <p>Rev. 2026.08.02</p>
+          </div>
+          <div class="outcome">
+            <div class="oc-label">Next Scheduled Review</div>
+            <p>February 2027</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- TABLE OF CONTENTS -->
+    <section class="doc-section reveal" id="toc">
+      <div class="section-eyebrow"><span class="section-idx">TOC</span><h2>Table of Contents</h2></div>
+      <div class="doc-card">
+        <div class="outcome-grid" style="grid-template-columns: repeat(auto-fit,minmax(220px,1fr));">
+          <a href="#purpose" class="outcome toc-link" style="display:block;"><div class="oc-label">§01 Purpose &amp; Scope</div></a>
+          <a href="#conduct-areas" class="outcome toc-link" style="display:block;"><div class="oc-label">§02 Conduct in Staff Areas</div></a>
+          <a href="#activity" class="outcome toc-link" style="display:block;"><div class="oc-label">§03 Support Activity Requirements</div></a>
+          <a href="#weekly-requirements" class="outcome toc-link" style="display:block;"><div class="oc-label">§04 Weekly Staff Requirements</div></a>
+          <a href="#professional" class="outcome toc-link" style="display:block;"><div class="oc-label">§05 Professional Conduct</div></a>
+          <a href="#moderation-guide" class="outcome toc-link" style="display:block;"><div class="oc-label">§06 Staff Moderation Guide</div></a>
+          <a href="#confidentiality" class="outcome toc-link" style="display:block;"><div class="oc-label">§07 Confidentiality</div></a>
+          <a href="#definitions" class="outcome toc-link" style="display:block;"><div class="oc-label">§08 Definitions</div></a>
+          <a href="#conflict-of-interest" class="outcome toc-link" style="display:block;"><div class="oc-label">§09 Conflict of Interest</div></a>
+          <a href="#promotion" class="outcome toc-link" style="display:block;"><div class="oc-label">§10 Staff Promotion Path</div></a>
+          <a href="#appointment-term" class="outcome toc-link" style="display:block;"><div class="oc-label">§11 Staff Appointment Term</div></a>
+          <a href="#ceiling" class="outcome toc-link" style="display:block;"><div class="oc-label">§12 Staff Role Ceiling</div></a>
+          <a href="#recovery" class="outcome toc-link" style="display:block;"><div class="oc-label">§13 Emergency &amp; Account Recovery</div></a>
+          <a href="#enforcement" class="outcome toc-link" style="display:block;"><div class="oc-label">§14 Enforcement</div></a>
+          <a href="#strike-system" class="outcome toc-link" style="display:block;"><div class="oc-label">§15 Staff Strike System</div></a>
+          <a href="#leave-inactivity" class="outcome toc-link" style="display:block;"><div class="oc-label">§16 Staff Leave &amp; Inactivity</div></a>
+          <a href="#resignation" class="outcome toc-link" style="display:block;"><div class="oc-label">§17 Staff Resignation</div></a>
+          <a href="#appeals" class="outcome toc-link" style="display:block;"><div class="oc-label">§18 Appeals</div></a>
+          <a href="#acknowledgement" class="outcome toc-link" style="display:block;"><div class="oc-label">§19 Acknowledgement</div></a>
+          <a href="#revision-history" class="outcome toc-link" style="display:block;"><div class="oc-label">§20 Revision History</div></a>
+        </div>
+      </div>
     </section>
 
     <!-- §01 -->
@@ -487,12 +553,62 @@
         <li><span class="mark no">✕</span><span><strong>Artificially inflating</strong> ticket counts is considered misconduct and is subject to §10 enforcement.</span></li>
         <li><span class="mark yes">✓</span><span>Staff should prioritize <strong>quality over speed</strong> while still meeting the daily minimum whenever ticket volume allows.</span></li>
         <li><span class="mark yes">✓</span><span>If fewer than five tickets are available during a shift, staff should <strong>assist with all available tickets</strong> instead — no penalty applies.</span></li>
+        <li><span class="mark yes">✓</span><span><strong>Weekly requirements do not replace daily expectations</strong> — both standards apply.</span></li>
       </ul>
     </section>
 
     <!-- §04 -->
+    <section class="doc-section reveal" id="weekly-requirements">
+      <div class="section-eyebrow"><span class="section-idx">§04</span><h2>Weekly Staff Requirements</h2></div>
+      <p class="section-intro">Staff members are expected to remain active every week. The figures below are <strong>minimum expectations, not targets</strong> — they exist to keep every position active and accountable, not to define success.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Role</th>
+              <th>Minimum Staff Messages</th>
+              <th>Minimum Support Tickets</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong style="color:var(--heading);">Official Manager</strong></td>
+              <td>20 per week</td>
+              <td>10 per week</td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--heading);">Administrator</strong></td>
+              <td>15 per week</td>
+              <td>8 per week</td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--heading);">Moderator</strong></td>
+              <td>10 per week</td>
+              <td>5 per week</td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--heading);">Trial Staff</strong></td>
+              <td>5 per week</td>
+              <td>3 per week</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <ul class="check-list" style="margin-top:24px;">
+        <li><span class="mark yes">✓</span><span><strong>Quality is always more important than quantity.</strong></span></li>
+        <li><span class="mark yes">✓</span><span>Messages must be <strong>meaningful and related to staff work.</strong></span></li>
+        <li><span class="mark no">✕</span><span><strong>Spam, one-word replies, and unnecessary chatting</strong> do not count.</span></li>
+        <li><span class="mark yes">✓</span><span>Ticket activity must involve <strong>actual assistance.</strong></span></li>
+        <li><span class="mark yes">✓</span><span>If ticket volume is low, staff are only expected to <strong>help with available tickets.</strong></span></li>
+        <li><span class="mark no">✕</span><span><strong>Repeated inactivity</strong> may result in a performance review.</span></li>
+      </ul>
+    </section>
+
+    <!-- §05 -->
     <section class="doc-section reveal" id="professional">
-      <div class="section-eyebrow"><span class="section-idx">§04</span><h2>Professional Conduct Standards</h2></div>
+      <div class="section-eyebrow"><span class="section-idx">§05</span><h2>Professional Conduct Standards</h2></div>
       <ul class="check-list">
         <li><span class="mark yes">✓</span><span>Be <strong>respectful, patient, and unbiased</strong> with every customer and applicant.</span></li>
         <li><span class="mark no">✕</span><span><strong>Never argue</strong> with customers, regardless of how a conversation escalates.</span></li>
@@ -501,15 +617,184 @@
       </ul>
     </section>
 
-    <!-- §05 -->
-    <section class="doc-section reveal" id="confidentiality">
-      <div class="section-eyebrow"><span class="section-idx">§05</span><h2>Confidentiality</h2></div>
-      <p class="section-intro">Staff must maintain confidentiality regarding <strong>customer information</strong> and <strong>internal staff discussions</strong> at all times. Information encountered in the course of duty is not to be shared outside its intended channel, discussed with unauthorized parties, or used for personal benefit.</p>
+    <!-- §06 -->
+    <section class="doc-section reveal" id="moderation-guide">
+      <div class="section-eyebrow"><span class="section-idx">§06</span><h2>Staff Moderation Guide</h2></div>
+      <p class="section-intro">Moderation actions escalate by offense within each category. Some categories carry no escalation path and call for an immediate ban.</p>
+
+      <div class="doc-card">
+        <span class="card-eyebrow">Advertising</span>
+        <div class="outcome-grid">
+          <div class="outcome">
+            <div class="oc-label"><span class="mark yes">✓</span>First Offense</div>
+            <p>Warning</p>
+          </div>
+          <div class="outcome">
+            <div class="oc-label"><span class="mark no">✕</span>Second Offense</div>
+            <p>24 Hour Mute</p>
+          </div>
+          <div class="outcome">
+            <div class="oc-label"><span class="mark no">✕</span>Third Offense</div>
+            <p>Ban</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-card">
+        <span class="card-eyebrow">Spam</span>
+        <div class="outcome-grid">
+          <div class="outcome">
+            <div class="oc-label"><span class="mark yes">✓</span>First Offense</div>
+            <p>Warning</p>
+          </div>
+          <div class="outcome">
+            <div class="oc-label"><span class="mark no">✕</span>Second Offense</div>
+            <p>24 Hour Mute</p>
+          </div>
+          <div class="outcome">
+            <div class="oc-label"><span class="mark no">✕</span>Third Offense</div>
+            <p>Ban</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-card">
+        <span class="card-eyebrow">Harassment / Toxic Behaviour</span>
+        <div class="outcome-grid">
+          <div class="outcome">
+            <div class="oc-label"><span class="mark yes">✓</span>First Offense</div>
+            <p>Warning</p>
+          </div>
+          <div class="outcome">
+            <div class="oc-label"><span class="mark no">✕</span>Second Offense</div>
+            <p>10 Minute Mute</p>
+          </div>
+          <div class="outcome">
+            <div class="oc-label"><span class="mark no">✕</span>Third Offense</div>
+            <p>1 Hour Mute</p>
+          </div>
+          <div class="outcome">
+            <div class="oc-label"><span class="mark no">✕</span>Fourth Offense</div>
+            <p>24 Hour Mute</p>
+          </div>
+          <div class="outcome">
+            <div class="oc-label"><span class="mark no">✕</span>Fifth Offense</div>
+            <p>Ban</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout danger">
+        <div class="callout-icon" aria-hidden="true">!</div>
+        <div>
+          <h4>NSFW or Gore</h4>
+          <p>Immediate Ban — no escalation path.</p>
+        </div>
+      </div>
+
+      <div class="callout danger">
+        <div class="callout-icon" aria-hidden="true">!</div>
+        <div>
+          <h4>Doxxing</h4>
+          <p>Immediate Ban — no escalation path.</p>
+        </div>
+      </div>
+
+      <div class="callout danger">
+        <div class="callout-icon" aria-hidden="true">!</div>
+        <div>
+          <h4>Breaking Discord Terms of Service</h4>
+          <p>Immediate Ban — no escalation path.</p>
+        </div>
+      </div>
+
+      <div class="callout warn" style="margin-top:24px;">
+        <div class="callout-icon" aria-hidden="true">i</div>
+        <div>
+          <h4>Use discretion</h4>
+          <p>Severe or exceptional cases may require administrator approval before action is taken.</p>
+        </div>
+      </div>
     </section>
 
-    <!-- §06 -->
+    <!-- §07 -->
+    <section class="doc-section reveal" id="confidentiality">
+      <div class="section-eyebrow"><span class="section-idx">§07</span><h2>Confidentiality</h2></div>
+      <p class="section-intro">Staff must maintain confidentiality regarding <strong>customer information</strong> and <strong>internal staff discussions</strong> at all times. Information encountered in the course of duty is not to be shared outside its intended channel, discussed with unauthorized parties, or used for personal benefit.</p>
+
+      <p class="dim" style="margin-top:20px; font-size:14.5px; color:var(--muted);">Confidential information includes but is not limited to:</p>
+      <div class="chip-row">
+        <span class="chip">Customer information</span>
+        <span class="chip">Billing information</span>
+        <span class="chip">Internal discussions</span>
+        <span class="chip">Investigation records</span>
+        <span class="chip">Administrative decisions</span>
+        <span class="chip">Staff reports</span>
+        <span class="chip">Server infrastructure</span>
+        <span class="chip">Panel credentials</span>
+        <span class="chip">Internal documentation</span>
+      </div>
+
+      <div class="callout danger" style="margin-top:20px;">
+        <div class="callout-icon" aria-hidden="true">!</div>
+        <div>
+          <h4>Unauthorized disclosure</h4>
+          <p>Unauthorized disclosure of confidential information may result in immediate removal from the staff team.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- §08 -->
+    <section class="doc-section reveal" id="definitions">
+      <div class="section-eyebrow"><span class="section-idx">§08</span><h2>Definitions</h2></div>
+      <p class="section-intro">Terms used throughout this policy carry the specific meanings defined below.</p>
+
+      <div class="doc-card">
+        <span class="card-eyebrow">Staff Member</span>
+        <p>Any user holding an official SKY HOSTING staff role.</p>
+      </div>
+      <div class="doc-card">
+        <span class="card-eyebrow">Support Ticket</span>
+        <p>Any customer or internal support request requiring staff assistance.</p>
+      </div>
+      <div class="doc-card">
+        <span class="card-eyebrow">Meaningful Contribution</span>
+        <p>A response that genuinely assists, resolves, investigates, or escalates a support request.</p>
+      </div>
+      <div class="doc-card">
+        <span class="card-eyebrow">Performance Review</span>
+        <p>A scheduled evaluation of staff activity, professionalism, contribution, and compliance.</p>
+      </div>
+      <div class="doc-card">
+        <span class="card-eyebrow">Recovery Code</span>
+        <p>A unique verification code issued to confirm a staff member's identity during account recovery.</p>
+      </div>
+      <div class="doc-card">
+        <span class="card-eyebrow">Strike</span>
+        <p>A formal disciplinary record issued after violating company policy.</p>
+      </div>
+    </section>
+
+    <!-- §09 -->
+    <section class="doc-section reveal" id="conflict-of-interest">
+      <div class="section-eyebrow"><span class="section-idx">§09</span><h2>Conflict of Interest</h2></div>
+      <p class="section-intro">Staff members must remain impartial while performing their duties.</p>
+
+      <p class="dim" style="margin-top:16px; font-size:14.5px; color:var(--muted);">The following are prohibited:</p>
+      <ul class="check-list">
+        <li><span class="mark no">✕</span><span><strong>Favoring</strong> friends or acquaintances.</span></li>
+        <li><span class="mark no">✕</span><span><strong>Giving unfair advantages.</strong></span></li>
+        <li><span class="mark no">✕</span><span><strong>Leaking confidential information.</strong></span></li>
+        <li><span class="mark no">✕</span><span><strong>Accepting gifts, payments, or favors</strong> in exchange for staff actions.</span></li>
+        <li><span class="mark no">✕</span><span><strong>Making decisions for personal benefit.</strong></span></li>
+      </ul>
+
+      <p style="margin-top:20px; font-size:14.5px;">Violations may result in disciplinary action.</p>
+    </section>
+
+    <!-- §10 -->
     <section class="doc-section reveal" id="promotion">
-      <div class="section-eyebrow"><span class="section-idx">§06</span><h2>Staff Promotion Path</h2></div>
+      <div class="section-eyebrow"><span class="section-idx">§10</span><h2>Staff Promotion Path</h2></div>
       <p class="section-intro">Progression through the staff track is earned, not assigned. Every member follows the same path from entry to the highest attainable staff position.</p>
 
       <div class="roadmap">
@@ -546,9 +831,9 @@
       </ul>
     </section>
 
-    <!-- §07 -->
+    <!-- §09 -->
     <section class="doc-section reveal" id="appointment-term">
-      <div class="section-eyebrow"><span class="section-idx">§07</span><h2>Staff Appointment Term</h2></div>
+      <div class="section-eyebrow"><span class="section-idx">§11</span><h2>Staff Appointment Term</h2></div>
 
       <div class="doc-card">
         <span class="card-eyebrow">Not a permanent appointment</span>
@@ -590,15 +875,15 @@
       </div>
     </section>
 
-    <!-- §08 -->
+    <!-- §10 -->
     <section class="doc-section reveal" id="ceiling">
-      <div class="section-eyebrow"><span class="section-idx">§08</span><h2>Staff Role Ceiling</h2></div>
+      <div class="section-eyebrow"><span class="section-idx">§12</span><h2>Staff Role Ceiling</h2></div>
       <p class="section-intro"><strong>Official Manager is the highest role attainable through the staff track.</strong> No staff member progresses beyond it — Owner and Co-Owner are ownership positions held by the founding partners and are not part of the staff promotion path defined in this policy.</p>
     </section>
 
-    <!-- §09 -->
+    <!-- §11 -->
     <section class="doc-section reveal" id="recovery">
-      <div class="section-eyebrow"><span class="section-idx">§09</span><h2>Emergency &amp; Account Recovery</h2></div>
+      <div class="section-eyebrow"><span class="section-idx">§13</span><h2>Emergency &amp; Account Recovery</h2></div>
       <p class="section-intro">If a staff member loses access to their Discord account, or their account is compromised, lost, or otherwise inaccessible, the following recovery procedure applies. This is the only recognized path back to a staff role — access is never restored informally.</p>
 
       <div class="step-list">
@@ -641,9 +926,9 @@
       </div>
     </section>
 
-    <!-- §10 -->
+    <!-- §12 -->
     <section class="doc-section reveal" id="enforcement">
-      <div class="section-eyebrow"><span class="section-idx">§10</span><h2>Enforcement</h2></div>
+      <div class="section-eyebrow"><span class="section-idx">§14</span><h2>Enforcement</h2></div>
       <p class="section-intro">Violations of this policy escalate in severity. Each stage is documented against the staff member's record.</p>
 
       <div class="enforce-grid">
@@ -674,16 +959,165 @@
       </div>
     </section>
 
-    <!-- §11 -->
-    <section class="doc-section reveal" id="acknowledgement">
-      <div class="section-eyebrow"><span class="section-idx">§11</span><h2>Acknowledgement</h2></div>
-      <p class="section-intro">Holding any staff role at SKY HOSTING constitutes acceptance of this policy in full, alongside the Staff Policy governing role grants and approvals. Staff are expected to review both documents periodically, particularly following any revision.</p>
+    <!-- §13 -->
+    <section class="doc-section reveal" id="strike-system">
+      <div class="section-eyebrow"><span class="section-idx">§15</span><h2>Staff Strike System</h2></div>
+      <p class="section-intro">Strikes accumulate across a staff member's tenure and progress toward removal. Each stage is documented against the staff member's record.</p>
+
+      <div class="enforce-grid">
+        <div class="enforce-card lvl-1">
+          <div class="enforce-icon" aria-hidden="true">1</div>
+          <span class="enforce-eyebrow">Strike One</span>
+          <h5>Verbal Warning</h5>
+          <p>Minor policy violation.</p>
+        </div>
+        <div class="enforce-card lvl-2">
+          <div class="enforce-icon" aria-hidden="true">2</div>
+          <span class="enforce-eyebrow">Strike Two</span>
+          <h5>Written Warning</h5>
+          <p>Official warning recorded internally.</p>
+        </div>
+        <div class="enforce-card lvl-3">
+          <div class="enforce-icon" aria-hidden="true">3</div>
+          <span class="enforce-eyebrow">Strike Three</span>
+          <h5>Demotion</h5>
+          <p>Demote the staff member one role lower.</p>
+        </div>
+        <div class="enforce-card lvl-3">
+          <div class="enforce-icon" aria-hidden="true">4</div>
+          <span class="enforce-eyebrow">Strike Four</span>
+          <h5>Final Warning</h5>
+          <p>Final opportunity before removal.</p>
+        </div>
+        <div class="enforce-card lvl-4">
+          <div class="enforce-icon" aria-hidden="true">5</div>
+          <span class="enforce-eyebrow">Strike Five</span>
+          <h5>Removed</h5>
+          <p>Permanent removal from the staff team.</p>
+        </div>
+      </div>
+
+      <div class="callout danger" style="margin-top:24px;">
+        <div class="callout-icon" aria-hidden="true">!</div>
+        <div>
+          <h4>Immediate removal</h4>
+          <p>Serious violations including permission abuse, leaking confidential information, account compromise through negligence, malicious behaviour, or abuse of staff powers may result in immediate removal without following the normal strike progression.</p>
+        </div>
+      </div>
+
+      <div class="doc-card" style="margin-top:24px;">
+        <span class="card-eyebrow">Strike Expiration</span>
+        <p>Strikes remain active for <strong>ninety (90) days.</strong></p>
+        <p style="margin-top:10px;">After ninety days of continued good conduct, management may remove one strike at its discretion.</p>
+        <p style="margin-top:10px;">Serious misconduct, abuse of permissions, security breaches, or confidentiality violations <strong>do not expire automatically.</strong></p>
+      </div>
     </section>
 
-    <!-- §12 -->
+    <!-- §16 -->
+    <section class="doc-section reveal" id="leave-inactivity">
+      <div class="section-eyebrow"><span class="section-idx">§16</span><h2>Staff Leave &amp; Inactivity</h2></div>
+      <p class="section-intro">Staff members who cannot remain active should notify management in advance whenever possible.</p>
+
+      <p class="dim" style="margin-top:16px; font-size:14.5px; color:var(--muted);">Examples include:</p>
+      <ul class="check-list">
+        <li><span class="mark yes">✓</span><span>School or examinations.</span></li>
+        <li><span class="mark yes">✓</span><span>Vacation.</span></li>
+        <li><span class="mark yes">✓</span><span>Medical reasons.</span></li>
+        <li><span class="mark yes">✓</span><span>Family emergencies.</span></li>
+      </ul>
+
+      <div class="callout" style="margin-top:20px;">
+        <div class="callout-icon" aria-hidden="true">i</div>
+        <div>
+          <h4>Approved leave</h4>
+          <p>Approved leave does not count as inactivity and will not negatively affect performance reviews.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- §17 -->
+    <section class="doc-section reveal" id="resignation">
+      <div class="section-eyebrow"><span class="section-idx">§17</span><h2>Staff Resignation</h2></div>
+      <p class="section-intro">Staff members wishing to leave the team should:</p>
+
+      <ul class="check-list">
+        <li><span class="mark yes">✓</span><span>Notify an Administrator or Official Manager.</span></li>
+        <li><span class="mark yes">✓</span><span>Return any staff-only resources if applicable.</span></li>
+        <li><span class="mark yes">✓</span><span>Complete outstanding responsibilities whenever possible.</span></li>
+        <li><span class="mark yes">✓</span><span>Staff permissions will then be removed.</span></li>
+      </ul>
+
+      <p style="margin-top:20px; font-size:14.5px;">Former staff members may reapply in the future unless removed for misconduct.</p>
+    </section>
+
+    <!-- §18 -->
+    <section class="doc-section reveal" id="appeals">
+      <div class="section-eyebrow"><span class="section-idx">§18</span><h2>Appeals</h2></div>
+      <p class="section-intro">Staff members who are demoted or removed may submit one formal appeal.</p>
+
+      <p class="dim" style="margin-top:16px; font-size:14.5px; color:var(--muted);">Appeals must:</p>
+      <ul class="check-list">
+        <li><span class="mark yes">✓</span><span>Be truthful.</span></li>
+        <li><span class="mark yes">✓</span><span>Include supporting evidence where applicable.</span></li>
+        <li><span class="mark yes">✓</span><span>Be respectful.</span></li>
+      </ul>
+
+      <p style="margin-top:20px; font-size:14.5px;">Management will review each appeal individually. <strong>Management decisions after appeal are final.</strong></p>
+    </section>
+
+    <!-- §19 -->
+    <section class="doc-section reveal" id="acknowledgement">
+      <div class="section-eyebrow"><span class="section-idx">§19</span><h2>Acknowledgement</h2></div>
+      <p class="section-intro">By accepting any SKY HOSTING staff position, you acknowledge that you have read, understood, and agree to comply with this Staff Conduct &amp; Activity Policy and all future revisions.</p>
+      <p style="margin-top:12px; font-size:15px;">Failure to comply with these policies may result in warnings, strikes, suspension, demotion, or permanent removal from the staff team.</p>
+    </section>
+
+    <!-- §20 -->
     <section class="doc-section reveal" id="revision-history">
-      <div class="section-eyebrow"><span class="section-idx">§12</span><h2>Revision History</h2></div>
+      <div class="section-eyebrow"><span class="section-idx">§20</span><h2>Revision History</h2></div>
       <p class="section-intro">This document is the single governing Staff Conduct &amp; Activity Policy for SKY HOSTING. It is revised in place — changes are logged here rather than issued as separate documents.</p>
+
+      <div class="doc-card">
+        <span class="card-eyebrow">Version Information</span>
+        <div class="outcome-grid">
+          <div class="outcome">
+            <div class="oc-label">Current Version</div>
+            <p>2.0</p>
+          </div>
+          <div class="outcome">
+            <div class="oc-label">Current Revision</div>
+            <p>2026.08.02</p>
+          </div>
+          <div class="outcome">
+            <div class="oc-label">Previous Revision</div>
+            <p>2026.08.01</p>
+          </div>
+          <div class="outcome">
+            <div class="oc-label">Next Planned Review</div>
+            <p>February 2027</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="rev-entry">
+        <div class="rev-entry-head">
+          <div>
+            <div class="rev-tag">Rev. 2026.08.02 — Weekly Requirements &amp; Staff Strike System</div>
+            <div class="rev-date">Published August 2, 2026</div>
+          </div>
+          <span class="rev-badge-current">CURRENT</span>
+        </div>
+        <ul class="check-list">
+          <li><span class="mark yes">✓</span><span>Added <strong>Weekly Staff Requirements.</strong></span></li>
+          <li><span class="mark yes">✓</span><span>Added <strong>Staff Moderation Guide.</strong></span></li>
+          <li><span class="mark yes">✓</span><span>Added <strong>Staff Strike System.</strong></span></li>
+          <li><span class="mark yes">✓</span><span>Added <strong>inactivity expectations.</strong></span></li>
+          <li><span class="mark yes">✓</span><span>Clarified <strong>ticket quality requirements.</strong></span></li>
+          <li><span class="mark yes">✓</span><span>Clarified <strong>moderation procedures.</strong></span></li>
+          <li><span class="mark yes">✓</span><span>Added <strong>progressive strike enforcement.</strong></span></li>
+          <li><span class="mark yes">✓</span><span>Improved internal <strong>staff governance.</strong></span></li>
+        </ul>
+      </div>
 
       <div class="rev-entry">
         <div class="rev-entry-head">
@@ -691,7 +1125,6 @@
             <div class="rev-tag">Rev. 2026.08.01 — Initial Release</div>
             <div class="rev-date">Published August 1, 2026</div>
           </div>
-          <span class="rev-badge-current">CURRENT</span>
         </div>
         <ul class="check-list">
           <li><span class="mark yes">✓</span><span>Published the first official <strong>Staff Conduct &amp; Activity Policy.</strong></span></li>
@@ -707,11 +1140,13 @@
           <li><span class="mark yes">✓</span><span>Confirmed that acceptance of any staff role constitutes acceptance of this policy <strong>and future revisions.</strong></span></li>
         </ul>
       </div>
+
+      <p class="dim" style="margin-top:22px; font-size:13.5px;">Future revisions will continue to be documented within this section to maintain a complete change history.</p>
     </section>
 
     <footer>
       <div class="footer-rule"></div>
-      <p>SKY HOSTING · STAFF CONDUCT &amp; ACTIVITY POLICY · REV 2026.08.01 · MK | PLAYZ &amp; AGASTYA</p>
+      <p>SKY HOSTING · STAFF CONDUCT &amp; ACTIVITY POLICY · VERSION 2.0 · REV. 2026.08.02 · MK | PLAYZ &amp; AGASTYA</p>
     </footer>
 
   </main>
